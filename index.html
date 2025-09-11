@@ -1023,6 +1023,14 @@
             animation: particleFloat 12s infinite linear;
         }
 
+        .menu-toggle {
+            display: none;
+            font-size: 1.8rem;
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+
         @keyframes particleFloat {
             0% {
                 transform: translateY(100vh) scale(0) rotate(0deg);
@@ -1053,9 +1061,25 @@
         }
 
         @media (max-width: 768px) {
-            .nav-links {
+            .menu-toggle { display: block; }
+
+            /* .nav-links {
                 display: none;
+            } */
+
+            .nav-links { 
+                display: none; 
+                flex-direction: column;
+                background: white;
+                position: absolute;
+                top: 60px;
+                right: 20px;
+                padding: 1rem;
+                border-radius: 8px;
+                box-shadow: 0 4px 12px rgba(0,0,0,0.1);
             }
+
+            .nav-links.active { display: flex; }
             
             .hero h1 {
                 font-size: 3rem;
@@ -1123,6 +1147,9 @@
         #backToTop:hover {
             background: #059669; /* darker shade */
         }
+
+        
+
     </style>
 </head>
 <body>
@@ -1130,6 +1157,7 @@
     <header>
         <nav>
             <div class="logo">DeepG</div>
+            <button class="menu-toggle"><i class="fas fa-bars"></i></button>
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#solutions">Solutions</a></li>
@@ -1715,6 +1743,14 @@
             top: 0,
             behavior: "smooth"
             });
+        });
+
+        // JavaScript toggle
+        const toggle = document.querySelector('.menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
+
+        toggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
         });
     </script>
 </body>
