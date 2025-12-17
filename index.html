@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,7 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;600;900&display=swap" rel="stylesheet">
-    
+
     <!-- Font Awesome Free (CDN) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 
@@ -41,7 +42,7 @@
             backdrop-filter: blur(20px);
             z-index: 1000;
             transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            border-bottom: 1px solid rgba(16, 185, 129, 0.1);
+            border-bottom: 1px solid rgba(61, 161, 161, 0.1);
         }
 
         nav {
@@ -54,26 +55,33 @@
         }
 
         .logo {
-            font-size: 2rem;
+            font-size: 2.2rem;
             font-weight: 800;
-            background: linear-gradient(135deg, #065f46, #10b981);
+            background: linear-gradient(135deg, #1a4d4d, #0f3131);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
             display: flex;
             align-items: center;
-            gap: 0.5rem;
+            gap: 0.9rem;
             transition: transform 0.3s ease;
+            text-decoration: none;
         }
 
         .logo:hover {
             transform: scale(1.05);
         }
 
-        .logo::before {
-            content: "🤖";
-            font-size: 1.8rem;
-            animation: bounce 2s infinite;
+        .logo-image {
+            width: 65px;
+            height: auto;
+            filter: drop-shadow(0 3px 8px rgba(26, 77, 77, 0.25));
+            transition: all 0.3s ease;
+        }
+
+        .logo:hover .logo-image {
+            filter: drop-shadow(0 5px 12px rgba(26, 77, 77, 0.35));
+            transform: translateY(-1px);
         }
 
         .nav-links {
@@ -92,7 +100,7 @@
         }
 
         .nav-links a:hover {
-            color: #059669;
+            color: #2d8585;
             transform: translateY(-2px);
         }
 
@@ -103,7 +111,7 @@
             height: 3px;
             bottom: -5px;
             left: 50%;
-            background: linear-gradient(90deg, #059669, #10b981);
+            background: linear-gradient(90deg, #2d8585, #3da1a1);
             transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
             border-radius: 2px;
             transform: translateX(-50%);
@@ -133,7 +141,7 @@
             right: -25%;
             width: 80%;
             height: 120%;
-            background: radial-gradient(ellipse, rgba(16, 185, 129, 0.15) 0%, transparent 70%);
+            background: radial-gradient(ellipse, rgba(61, 161, 161, 0.15) 0%, transparent 70%);
             animation: heroFloat 8s ease-in-out infinite;
         }
 
@@ -144,7 +152,7 @@
             left: -20%;
             width: 60%;
             height: 80%;
-            background: radial-gradient(ellipse, rgba(5, 150, 105, 0.1) 0%, transparent 70%);
+            background: radial-gradient(ellipse, rgba(45, 133, 133, 0.1) 0%, transparent 70%);
             animation: heroFloat 10s ease-in-out infinite reverse;
         }
 
@@ -159,14 +167,14 @@
             display: inline-flex;
             align-items: center;
             gap: 0.8rem;
-            background: rgba(16, 185, 129, 0.1);
-            color: #065f46;
+            background: rgba(61, 161, 161, 0.1);
+            color: #1a4d4d;
             padding: 0.8rem 1.5rem;
             border-radius: 50px;
             font-size: 1rem;
             font-weight: 600;
             margin-bottom: 2.5rem;
-            border: 2px solid rgba(16, 185, 129, 0.2);
+            border: 2px solid rgba(61, 161, 161, 0.2);
             backdrop-filter: blur(10px);
             animation: badgePulse 3s ease-in-out infinite;
             transition: transform 0.3s ease;
@@ -185,7 +193,7 @@
             font-size: 4.5rem;
             font-weight: 900;
             margin-bottom: 2rem;
-            background: linear-gradient(135deg, #065f46, #059669, #10b981, #34d399);
+            background: linear-gradient(135deg, #1a4d4d, #2d8585, #3da1a1, #6ec9c9);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -205,7 +213,7 @@
             left: 0;
             width: 100%;
             height: 8px;
-            background: linear-gradient(90deg, #10b981, #34d399);
+            background: linear-gradient(90deg, #3da1a1, #6ec9c9);
             opacity: 0.3;
             border-radius: 4px;
             animation: highlightExpand 2s ease-out;
@@ -230,7 +238,7 @@
         }
 
         .btn-primary {
-            background: linear-gradient(135deg, #059669, #10b981);
+            background: linear-gradient(135deg, #2d8585, #3da1a1);
             color: white;
             padding: 1.2rem 2.5rem;
             border: none;
@@ -242,7 +250,7 @@
             align-items: center;
             gap: 0.8rem;
             transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            box-shadow: 0 8px 25px rgba(16, 185, 129, 0.3);
+            box-shadow: 0 8px 25px rgba(61, 161, 161, 0.3);
             position: relative;
             overflow: hidden;
         }
@@ -264,14 +272,14 @@
 
         .btn-primary:hover {
             transform: translateY(-4px) scale(1.02);
-            box-shadow: 0 15px 35px rgba(16, 185, 129, 0.4);
+            box-shadow: 0 15px 35px rgba(61, 161, 161, 0.4);
         }
 
         .btn-secondary {
             background: rgba(255, 255, 255, 0.9);
-            color: #065f46;
+            color: #1a4d4d;
             padding: 1.2rem 2.5rem;
-            border: 2px solid #10b981;
+            border: 2px solid #3da1a1;
             border-radius: 50px;
             font-weight: 700;
             font-size: 1.1rem;
@@ -281,10 +289,10 @@
         }
 
         .btn-secondary:hover {
-            background: #10b981;
+            background: #3da1a1;
             color: white;
             transform: translateY(-4px) scale(1.02);
-            box-shadow: 0 15px 35px rgba(16, 185, 129, 0.3);
+            box-shadow: 0 15px 35px rgba(61, 161, 161, 0.3);
         }
 
         /* Enhanced Stats Section */
@@ -301,7 +309,7 @@
             left: 0;
             width: 100%;
             height: 2px;
-            background: linear-gradient(90deg, transparent, #10b981, transparent);
+            background: linear-gradient(90deg, transparent, #3da1a1, transparent);
         }
 
         .stats-container {
@@ -317,7 +325,7 @@
             padding: 3rem 2rem;
             border-radius: 25px;
             background: linear-gradient(135deg, #f0fdf4, #ecfdf5);
-            border: 2px solid rgba(16, 185, 129, 0.1);
+            border: 2px solid rgba(61, 161, 161, 0.1);
             transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
             position: relative;
             overflow: hidden;
@@ -330,7 +338,7 @@
             left: -50%;
             width: 200%;
             height: 200%;
-            background: radial-gradient(circle, rgba(16, 185, 129, 0.05) 0%, transparent 70%);
+            background: radial-gradient(circle, rgba(61, 161, 161, 0.05) 0%, transparent 70%);
             transition: all 0.5s ease;
             transform: scale(0);
         }
@@ -341,14 +349,14 @@
 
         .stat-item:hover {
             transform: translateY(-15px) scale(1.02);
-            box-shadow: 0 25px 50px rgba(16, 185, 129, 0.2);
-            border-color: rgba(16, 185, 129, 0.3);
+            box-shadow: 0 25px 50px rgba(61, 161, 161, 0.2);
+            border-color: rgba(61, 161, 161, 0.3);
         }
 
         .stat-number {
             font-size: 4rem;
             font-weight: 900;
-            background: linear-gradient(135deg, #059669, #10b981);
+            background: linear-gradient(135deg, #2d8585, #3da1a1);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -387,7 +395,7 @@
         .section-title {
             font-size: 3.5rem;
             font-weight: 900;
-            background: linear-gradient(135deg, #065f46, #10b981);
+            background: linear-gradient(135deg, #1a4d4d, #3da1a1);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -403,7 +411,7 @@
             transform: translateX(-50%);
             width: 100px;
             height: 4px;
-            background: linear-gradient(90deg, #10b981, #34d399);
+            background: linear-gradient(90deg, #3da1a1, #6ec9c9);
             border-radius: 2px;
         }
 
@@ -426,7 +434,7 @@
             border-radius: 25px;
             box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
             transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-            border: 2px solid rgba(16, 185, 129, 0.05);
+            border: 2px solid rgba(61, 161, 161, 0.05);
             position: relative;
             overflow: hidden;
         }
@@ -438,7 +446,7 @@
             left: -100%;
             width: 100%;
             height: 4px;
-            background: linear-gradient(90deg, #10b981, #34d399);
+            background: linear-gradient(90deg, #3da1a1, #6ec9c9);
             transition: left 0.5s ease;
         }
 
@@ -449,13 +457,13 @@
         .solution-card:hover {
             transform: translateY(-10px) scale(1.02);
             box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
-            border-color: rgba(16, 185, 129, 0.2);
+            border-color: rgba(61, 161, 161, 0.2);
         }
 
         .solution-icon {
             width: 80px;
             height: 80px;
-            background: linear-gradient(135deg, #10b981, #059669);
+            background: linear-gradient(135deg, #3da1a1, #2d8585);
             border-radius: 20px;
             display: flex;
             align-items: center;
@@ -463,18 +471,18 @@
             font-size: 2rem;
             margin-bottom: 2rem;
             transition: all 0.3s ease;
-            box-shadow: 0 8px 25px rgba(16, 185, 129, 0.3);
+            box-shadow: 0 8px 25px rgba(61, 161, 161, 0.3);
         }
 
         .solution-card:hover .solution-icon {
             transform: scale(1.1) rotate(5deg);
-            box-shadow: 0 15px 35px rgba(16, 185, 129, 0.4);
+            box-shadow: 0 15px 35px rgba(61, 161, 161, 0.4);
         }
 
         .solution-title {
             font-size: 1.5rem;
             font-weight: 700;
-            color: #065f46;
+            color: #1a4d4d;
             margin-bottom: 1.5rem;
         }
 
@@ -487,7 +495,7 @@
         /* Products Section */
         .products {
             padding: 8rem 2rem;
-            background: linear-gradient(135deg, #065f46, #047857, #059669);
+            background: linear-gradient(135deg, #1a4d4d, #246969, #2d8585);
             color: white;
             position: relative;
             overflow: hidden;
@@ -569,7 +577,7 @@
             content: "✓";
             position: absolute;
             left: 0;
-            color: #34d399;
+            color: #6ec9c9;
             font-weight: bold;
         }
 
@@ -596,7 +604,7 @@
             padding: 3rem 2rem;
             border-radius: 25px;
             background: linear-gradient(135deg, #f0fdf4, #ecfdf5);
-            border: 2px solid rgba(16, 185, 129, 0.1);
+            border: 2px solid rgba(61, 161, 161, 0.1);
             transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
             position: relative;
             overflow: hidden;
@@ -609,7 +617,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: linear-gradient(135deg, rgba(16, 185, 129, 0.05), rgba(52, 211, 153, 0.05));
+            background: linear-gradient(135deg, rgba(61, 161, 161, 0.05), rgba(52, 211, 153, 0.05));
             transition: top 0.5s ease;
         }
 
@@ -619,15 +627,15 @@
 
         .team-card:hover {
             transform: translateY(-15px) scale(1.02);
-            box-shadow: 0 25px 50px rgba(16, 185, 129, 0.15);
-            border-color: rgba(16, 185, 129, 0.3);
+            box-shadow: 0 25px 50px rgba(61, 161, 161, 0.15);
+            border-color: rgba(61, 161, 161, 0.3);
         }
 
         .team-avatar {
             width: 120px;
             height: 120px;
             border-radius: 50%;
-            background: linear-gradient(135deg, #10b981, #34d399);
+            background: linear-gradient(135deg, #3da1a1, #6ec9c9);
             margin: 0 auto 2rem;
             display: flex;
             align-items: center;
@@ -640,20 +648,20 @@
 
         .team-card:hover .team-avatar {
             transform: scale(1.1);
-            box-shadow: 0 15px 35px rgba(16, 185, 129, 0.3);
+            box-shadow: 0 15px 35px rgba(61, 161, 161, 0.3);
         }
 
         .team-name {
             font-size: 1.5rem;
             font-weight: 700;
-            color: #065f46;
+            color: #1a4d4d;
             margin-bottom: 0.5rem;
             position: relative;
             z-index: 1;
         }
 
         .team-role {
-            color: #10b981;
+            color: #3da1a1;
             font-weight: 600;
             margin-bottom: 1rem;
             position: relative;
@@ -688,7 +696,7 @@
         .contact-info h3 {
             font-size: 2.5rem;
             font-weight: 800;
-            color: #065f46;
+            color: #1a4d4d;
             margin-bottom: 2rem;
         }
 
@@ -712,7 +720,7 @@
         .contact-icon {
             width: 50px;
             height: 50px;
-            background: linear-gradient(135deg, #10b981, #34d399);
+            background: linear-gradient(135deg, #3da1a1, #6ec9c9);
             border-radius: 15px;
             display: flex;
             align-items: center;
@@ -725,7 +733,7 @@
             padding: 3rem;
             border-radius: 25px;
             box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
-            border: 2px solid rgba(16, 185, 129, 0.1);
+            border: 2px solid rgba(61, 161, 161, 0.1);
         }
 
         .form-group {
@@ -736,14 +744,14 @@
             display: block;
             margin-bottom: 0.5rem;
             font-weight: 600;
-            color: #065f46;
+            color: #1a4d4d;
         }
 
         .form-group input,
         .form-group textarea {
             width: 100%;
             padding: 1rem;
-            border: 2px solid rgba(16, 185, 129, 0.2);
+            border: 2px solid rgba(61, 161, 161, 0.2);
             border-radius: 15px;
             font-size: 1rem;
             transition: all 0.3s ease;
@@ -752,13 +760,13 @@
         .form-group input:focus,
         .form-group textarea:focus {
             outline: none;
-            border-color: #10b981;
-            box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.1);
+            border-color: #3da1a1;
+            box-shadow: 0 0 0 3px rgba(61, 161, 161, 0.1);
         }
 
         /* Enhanced Footer */
         .footer {
-            background: linear-gradient(135deg, #065f46, #047857);
+            background: linear-gradient(135deg, #1a4d4d, #246969);
             color: white;
             padding: 5rem 2rem 2rem;
             position: relative;
@@ -772,7 +780,7 @@
             left: 0;
             width: 100%;
             height: 4px;
-            background: linear-gradient(90deg, #10b981, #34d399, #6ee7b7);
+            background: linear-gradient(90deg, #3da1a1, #6ec9c9, #9ae0e0);
         }
 
         .footer-content {
@@ -807,14 +815,14 @@
         }
 
         .footer-section a:hover {
-            color: #6ee7b7;
+            color: #9ae0e0;
             transform: translateX(5px);
         }
 
         .footer-logo {
             font-size: 2.5rem;
             font-weight: 900;
-            background: linear-gradient(135deg, #a7f3d0, #6ee7b7);
+            background: linear-gradient(135deg, #a7f3d0, #9ae0e0);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -864,6 +872,7 @@
                 opacity: 0;
                 transform: translateY(60px);
             }
+
             100% {
                 opacity: 1;
                 transform: translateY(0);
@@ -871,57 +880,72 @@
         }
 
         @keyframes heroFloat {
-            0%, 100% {
+
+            0%,
+            100% {
                 transform: translateY(0px) rotate(0deg);
             }
+
             50% {
                 transform: translateY(-30px) rotate(3deg);
             }
         }
 
         @keyframes productFloat {
-            0%, 100% {
+
+            0%,
+            100% {
                 transform: translateY(0px) rotate(0deg);
             }
+
             50% {
                 transform: translateY(-40px) rotate(-2deg);
             }
         }
 
         @keyframes badgePulse {
-            0%, 100% {
-                box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.4);
+
+            0%,
+            100% {
+                box-shadow: 0 0 0 0 rgba(61, 161, 161, 0.4);
             }
+
             50% {
-                box-shadow: 0 0 0 10px rgba(16, 185, 129, 0);
+                box-shadow: 0 0 0 10px rgba(61, 161, 161, 0);
             }
         }
 
         @keyframes sparkle {
-            0%, 100% {
+
+            0%,
+            100% {
                 transform: scale(1) rotate(0deg);
             }
+
             50% {
                 transform: scale(1.2) rotate(180deg);
             }
         }
 
         @keyframes titleGlow {
-            0%, 100% {
-                text-shadow: 0 0 20px rgba(16, 185, 129, 0.3);
+
+            0%,
+            100% {
+                text-shadow: 0 0 20px rgba(61, 161, 161, 0.3);
             }
+
             50% {
-                text-shadow: 0 0 40px rgba(16, 185, 129, 0.6), 0 0 60px rgba(52, 211, 153, 0.3);
+                text-shadow: 0 0 40px rgba(61, 161, 161, 0.6), 0 0 60px rgba(52, 211, 153, 0.3);
             }
         }
 
         /* @keyframes titleGlow {
             0%, 100% {
-                text-shadow: 0 0 16px rgba(16, 185, 129, 0.3), 
+                text-shadow: 0 0 16px rgba(61, 161, 161, 0.3), 
                             0 0 15px rgba(52, 211, 153, 0.25);
             }
             50% {
-                text-shadow: 0 0 12px rgba(16, 185, 129, 0.4),
+                text-shadow: 0 0 12px rgba(61, 161, 161, 0.4),
                             0 0 20px rgba(52, 211, 153, 0.35);
             }
         } */
@@ -931,6 +955,7 @@
                 width: 0;
                 left: 50%;
             }
+
             100% {
                 width: 100%;
                 left: 0;
@@ -942,6 +967,7 @@
                 opacity: 0;
                 transform: translateY(30px);
             }
+
             100% {
                 opacity: 1;
                 transform: translateY(0);
@@ -949,12 +975,19 @@
         }
 
         @keyframes bounce {
-            0%, 20%, 50%, 80%, 100% {
+
+            0%,
+            20%,
+            50%,
+            80%,
+            100% {
                 transform: translateY(0);
             }
+
             40% {
                 transform: translateY(-8px);
             }
+
             60% {
                 transform: translateY(-4px);
             }
@@ -1018,7 +1051,7 @@
 
         .particle {
             position: absolute;
-            background: rgba(16, 185, 129, 0.4);
+            background: rgba(61, 161, 161, 0.4);
             border-radius: 50%;
             animation: particleFloat 12s infinite linear;
         }
@@ -1031,17 +1064,22 @@
             cursor: pointer;
         }
 
+
+
         @keyframes particleFloat {
             0% {
                 transform: translateY(100vh) scale(0) rotate(0deg);
                 opacity: 1;
             }
+
             10% {
                 transform: translateY(90vh) scale(1) rotate(90deg);
             }
+
             90% {
                 transform: translateY(-10vh) scale(1) rotate(270deg);
             }
+
             100% {
                 transform: translateY(-20vh) scale(0) rotate(360deg);
                 opacity: 0;
@@ -1054,21 +1092,23 @@
                 grid-template-columns: 1fr;
                 gap: 3rem;
             }
-            
+
             .products-showcase {
                 grid-template-columns: 1fr;
             }
         }
 
         @media (max-width: 768px) {
-            .menu-toggle { display: block; }
+            .menu-toggle {
+                display: block;
+            }
 
             /* .nav-links {
                 display: none;
             } */
 
-            .nav-links { 
-                display: none; 
+            .nav-links {
+                display: none;
                 flex-direction: column;
                 background: white;
                 position: absolute;
@@ -1076,31 +1116,33 @@
                 right: 20px;
                 padding: 1rem;
                 border-radius: 8px;
-                box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
             }
 
-            .nav-links.active { display: flex; }
-            
+            .nav-links.active {
+                display: flex;
+            }
+
             .hero h1 {
                 font-size: 3rem;
             }
-            
+
             .section-title {
                 font-size: 2.5rem;
             }
-            
+
             .cta-buttons {
                 flex-direction: column;
                 align-items: center;
             }
-            
+
             .stats-container,
             .solutions-grid,
             .team-grid {
                 grid-template-columns: 1fr;
                 gap: 2rem;
             }
-            
+
             .footer-content {
                 grid-template-columns: 1fr;
                 gap: 2rem;
@@ -1112,17 +1154,19 @@
             .hero h1 {
                 font-size: 2.2rem;
             }
-            
+
             .hero p {
                 font-size: 1.1rem;
             }
-            
+
             .btn-primary,
             .btn-secondary {
                 padding: 1rem 2rem;
                 font-size: 1rem;
             }
         }
+
+
 
         #backToTop {
             position: fixed;
@@ -1132,12 +1176,14 @@
             height: 50px;
             border: none;
             border-radius: 50%;
-            background: #10b981; /* brand color */
+            background: #3da1a1;
+            /* brand color */
             color: white;
             font-size: 1.5rem;
             cursor: pointer;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-            display: none; /* hidden by default */
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            display: none;
+            /* hidden by default */
             align-items: center;
             justify-content: center;
             transition: all 0.3s ease;
@@ -1145,18 +1191,21 @@
         }
 
         #backToTop:hover {
-            background: #059669; /* darker shade */
+            background: #2d8585;
+            /* darker shade */
         }
-
-        
-
     </style>
 </head>
+
 <body>
     <!-- Enhanced Header -->
     <header>
         <nav>
-            <div class="logo">DeepG</div>
+            <a href="#home" class="logo">
+                <img src="C:\Users\Admin\Desktop\DeepG\LandingPages\DeepG\images\deepg_vetorized.png" alt="DeepG Logo"
+                    class="logo-image">
+                <span>DeepG</span>
+            </a>
             <button class="menu-toggle"><i class="fas fa-bars"></i></button>
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
@@ -1176,11 +1225,10 @@
             <h1>
                 Transforming the Future<br>
                 with DeepG
-                <!-- <span class="hero-highlight">Artificial Intelligence</span> -->
             </h1>
             <p>
-                DeepG pioneers cutting-edge artificial intelligence solutions that empower 
-                businesses to unlock unprecedented possibilities and drive meaningful innovation 
+                DeepG pioneers cutting-edge artificial intelligence solutions, strategic consultancy, and expert
+                guidance that empower businesses to unlock unprecedented possibilities and drive meaningful innovation
                 across industries.
             </p>
             <div class="cta-buttons">
@@ -1193,7 +1241,7 @@
     </section>
 
     <!-- Enhanced Stats Section -->
-    <section class="stats" id="stats">
+    <!-- <section class="stats" id="stats">
         <div class="stats-container">
             <div class="stat-item animate-on-scroll">
                 <span class="stat-number">500+</span>
@@ -1208,7 +1256,7 @@
                 <span class="stat-label">API Calls Processed</span>
             </div>
         </div>
-    </section>
+    </section> -->
 
     <!-- Solutions That Transform Section -->
     <section class="solutions" id="solutions">
@@ -1216,64 +1264,73 @@
             <div class="section-header animate-on-scroll">
                 <h2 class="section-title">Solutions That Transform</h2>
                 <p class="section-subtitle">
-                    Discover how our revolutionary AI solutions can transform your business operations, 
+                    Discover how our revolutionary AI solutions can transform your business operations,
                     enhance decision-making, and unlock new opportunities for exponential growth.
                 </p>
             </div>
             <div class="solutions-grid">
                 <div class="solution-card animate-slide-left">
-                    <!-- <div class="solution-icon">🧠</div> -->
-                    <h3 class="solution-title">Advanced Machine Learning</h3>
+                    <!-- <div class="solution-icon">🤖</div> -->
+                    <h3 class="solution-title">AI Agent Appliaction</h3>
                     <p class="solution-description">
-                        Harness the power of deep learning algorithms that continuously evolve and adapt 
-                        to your business needs, providing intelligent automation and predictive insights 
-                        that drive strategic decision-making.
+                        Build sophisticated AI agents that understand context, learn from interactions,
+                        and execute multi-step workflows autonomously, enhancing productivity and
+                        delivering personalized experiences at scale.
                     </p>
                 </div>
                 <div class="solution-card animate-on-scroll">
                     <!-- <div class="solution-icon">🔍</div> -->
                     <h3 class="solution-title">Intelligent Data Analytics</h3>
                     <p class="solution-description">
-                        Transform vast amounts of raw data into actionable intelligence with our 
-                        sophisticated analytics platform, featuring real-time processing and 
+                        Transform vast amounts of raw data into actionable intelligence with our
+                        sophisticated analytics platform, featuring real-time processing and
                         comprehensive visualization tools.
                     </p>
                 </div>
                 <div class="solution-card animate-slide-right">
                     <!-- <div class="solution-icon">💬</div> -->
-                    <h3 class="solution-title">Natural Language Processing</h3>
+                    <h3 class="solution-title">NLP Driven Application</h3>
                     <p class="solution-description">
-                        Break through language barriers with advanced NLP capabilities including 
-                        sentiment analysis, document processing, and intelligent chatbots that 
-                        understand context and nuance.
+                        Transform your existing applications with intuitive natural language interfaces, enabling users
+                        to control complex workflows through simple conversational commands. With MCP integration, the
+                        assistant can securely access your real tools—APIs, databases, files, and internal systems—to
+                        retrieve context, execute actions, and deliver accurate, end-to-end outcomes without complex
+                        navigation.
                     </p>
+
                 </div>
                 <div class="solution-card animate-slide-left">
                     <!-- <div class="solution-icon">👁️</div> -->
                     <h3 class="solution-title">Computer Vision Solutions</h3>
                     <p class="solution-description">
-                        Empower your applications with state-of-the-art image recognition, object 
-                        detection, and visual analysis capabilities for automated quality control 
+                        Empower your applications with state-of-the-art image recognition, object
+                        detection, and visual analysis capabilities for automated quality control
                         and intelligent monitoring systems.
                     </p>
                 </div>
                 <div class="solution-card animate-on-scroll">
                     <!-- <div class="solution-icon">⚡</div> -->
-                    <h3 class="solution-title">Real-time AI Processing</h3>
+                    <h3 class="solution-title">AI Business Consultancy</h3>
                     <p class="solution-description">
-                        Experience lightning-fast AI processing with ultra-low latency, enabling 
-                        real-time decision making and instant responses for mission-critical 
-                        applications and time-sensitive operations.
+                        Get expert guidance to plan, build, and scale AI solutions that actually fit your business
+                        goals.
+                        We help with use-case discovery, architecture, model selection, data strategy, security, cost
+                        optimization, and deployment—so you can move from idea to production with confidence and
+                        measurable ROI.
                     </p>
+
+
                 </div>
                 <div class="solution-card animate-slide-right">
                     <!-- <div class="solution-icon">🔒</div> -->
-                    <h3 class="solution-title">Enterprise-Grade Security</h3>
+                    <h3 class="solution-title">Custom LLM Deployment</h3>
                     <p class="solution-description">
-                        Protect your data with military-grade encryption, comprehensive compliance 
-                        frameworks, and advanced threat detection systems designed for the most 
-                        demanding enterprise environments.
+                        Deploy powerful open-source LLMs on your own servers or private cloud for full data control,
+                        lower long-term costs, and predictable performance. We handle model selection, GPU setup,
+                        optimization, and monitoring—so you get fast, secure, and compliant AI inference without
+                        sending sensitive data to third-party providers.
                     </p>
+
                 </div>
             </div>
         </div>
@@ -1285,7 +1342,7 @@
             <div class="section-header animate-on-scroll">
                 <h2 class="section-title">Our Product Suite</h2>
                 <p class="section-subtitle">
-                    Comprehensive AI solutions designed to accelerate your digital transformation 
+                    Comprehensive AI solutions designed to accelerate your digital transformation
                     and deliver measurable business outcomes across all industry verticals.
                 </p>
             </div>
@@ -1325,12 +1382,12 @@
     </section>
 
     <!-- Meet Our Expert Team Section -->
-    <section class="team" id="team">
+    <!-- <section class="team" id="team">
         <div class="team-container">
             <div class="section-header animate-on-scroll">
                 <h2 class="section-title">Meet Our Expert Team</h2>
                 <p class="section-subtitle">
-                    Our world-class team of AI researchers, engineers, and industry experts 
+                    Our world-class team of AI researchers, engineers, and industry experts
                     is dedicated to pushing the boundaries of artificial intelligence innovation.
                 </p>
             </div>
@@ -1340,7 +1397,7 @@
                     <h3 class="team-name">Dr. Alex Chen</h3>
                     <p class="team-role">Chief AI Officer</p>
                     <p class="team-bio">
-                        Former Google AI researcher with 15+ years in machine learning. 
+                        Former Google AI researcher with 15+ years in machine learning.
                         PhD in Computer Science from MIT, specializing in deep learning architectures.
                     </p>
                 </div>
@@ -1349,7 +1406,7 @@
                     <h3 class="team-name">Dr. Sarah Rodriguez</h3>
                     <p class="team-role">VP of Data Science</p>
                     <p class="team-bio">
-                        Leading data scientist with expertise in NLP and computer vision. 
+                        Leading data scientist with expertise in NLP and computer vision.
                         Published 50+ papers and holds multiple AI patents.
                     </p>
                 </div>
@@ -1358,7 +1415,7 @@
                     <h3 class="team-name">Michael Johnson</h3>
                     <p class="team-role">Head of Engineering</p>
                     <p class="team-bio">
-                        Seasoned engineering leader who scaled AI platforms at top tech companies. 
+                        Seasoned engineering leader who scaled AI platforms at top tech companies.
                         Expert in distributed systems and cloud architecture.
                     </p>
                 </div>
@@ -1367,14 +1424,14 @@
                     <h3 class="team-name">Dr. Emily Wang</h3>
                     <p class="team-role">Research Director</p>
                     <p class="team-bio">
-                        AI research pioneer with breakthrough contributions to reinforcement learning. 
+                        AI research pioneer with breakthrough contributions to reinforcement learning.
                         Stanford PhD and recipient of the AI Excellence Award.
                     </p>
                 </div>
-                
+
             </div>
         </div>
-    </section>
+    </section> -->
 
     <!-- Get in Touch Section -->
     <section class="contact" id="contact">
@@ -1383,15 +1440,15 @@
                 <div class="contact-info animate-slide-left">
                     <h3>Get in Touch</h3>
                     <p>
-                        Ready to transform your business with cutting-edge AI solutions? 
-                        Our team of experts is here to help you navigate your AI journey 
+                        Ready to transform your business with cutting-edge AI solutions?
+                        Our team of experts is here to help you navigate your AI journey
                         and unlock unprecedented growth opportunities.
                     </p>
                     <div class="contact-details">
                         <div class="contact-item">
                             <div class="contact-icon"><i class="fa-solid fa-location-dot"></i></div>
                             <div>
-                                <strong>Headquarters</strong><br>
+                                <strong>Office</strong><br>
                                 123 Innovation Drive, Silicon Valley<br>
                                 San Francisco, CA 94105
                             </div>
@@ -1400,27 +1457,28 @@
                             <div class="contact-icon"><i class="fa-solid fa-phone"></i></div>
                             <div>
                                 <strong>Phone</strong><br>
-                                +1 (555) 123-4567
+                                +880 1797622220
                             </div>
                         </div>
                         <div class="contact-item">
                             <div class="contact-icon"><i class="fa-solid fa-envelope"></i></div>
                             <div>
                                 <strong>Email</strong><br>
-                                hello@deepg.dev
+                                <a href="/cdn-cgi/l/email-protection" class="__cf_email__"
+                                    data-cfemail="5038353c3c3f1034353520377e343526">info@deepg.dev</a>
                             </div>
                         </div>
                         <div class="contact-item">
                             <div class="contact-icon"><i class="fa-solid fa-clock"></i></div>
                             <div>
                                 <strong>Business Hours</strong><br>
-                                Mon-Fri: 9AM-6PM PST<br>
+                                Mon-Fri: 9AM-6PM BDT<br>
                                 24/7 Emergency Support
                             </div>
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="contact-form animate-slide-right">
                     <form>
                         <div class="form-group">
@@ -1437,7 +1495,8 @@
                         </div>
                         <div class="form-group">
                             <label for="message">Message</label>
-                            <textarea id="message" name="message" rows="4" placeholder="Tell us about your AI needs..."></textarea>
+                            <textarea id="message" name="message" rows="4"
+                                placeholder="Tell us about your AI needs..."></textarea>
                         </div>
                         <button type="submit" class="btn-primary" style="width: 100%;">
                             Send Message →
@@ -1457,61 +1516,61 @@
             <div class="footer-section">
                 <div class="footer-logo">DeepG</div>
                 <p class="footer-description">
-                    Leading the artificial intelligence revolution with cutting-edge solutions 
+                    Leading the artificial intelligence revolution with cutting-edge solutions
                     that transform businesses and drive innovation across industries worldwide.
                 </p>
                 <div class="social-links">
-                    <a href="#" class="social-link"><i class="fa-brands fa-square-facebook"></i></a>
-                    <a href="#" class="social-link"><i class="fa-brands fa-linkedin"></i></a>
-                    <a href="#" class="social-link"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="#" class="social-link"><i class="fa-brands fa-youtube"></i></a>
-                    <a href="#" class="social-link"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="https://www.facebook.com/deeeepg" class="social-link"><i class="fa-brands fa-square-facebook"></i></a>
+                    <a href="https://www.linkedin.com/company/deepg" class="social-link"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://x.com/DeepG898263" class="social-link"><i class="fa-brands fa-x-twitter"></i></a>
                 </div>
             </div>
-            
+
             <div class="footer-section">
                 <h4>Solutions</h4>
                 <ul>
-                    <li><a href="#">Machine Learning</a></li>
-                    <li><a href="#">Data Analytics</a></li>
-                    <li><a href="#">Computer Vision</a></li>
-                    <li><a href="#">Natural Language Processing</a></li>
-                    <li><a href="#">Predictive Analytics</a></li>
+                    <li><a href="#">AI Agent Appliaction</a></li>
+                    <li><a href="#">Intelligent Data Analytics</a></li>
+                    <li><a href="#">NLP Driven Application</a></li>
+                    <li><a href="#">Computer Vision Solutions</a></li>
+                    <li><a href="#">AI Business Consultancy</a></li>
+                    <li><a href="#">AI Business Consultancy</a></li>
+                    <li><a href="#">Custom LLM Deployment</a></li>
                 </ul>
             </div>
-            
+
             <div class="footer-section">
                 <h4>Company</h4>
                 <ul>
                     <li><a href="#">About Us</a></li>
-                    <li><a href="#">Leadership Team</a></li>
                     <li><a href="#">Careers</a></li>
-                    <li><a href="#">News & Press</a></li>
-                    <li><a href="#">Research Papers</a></li>
+                    <!-- <li><a href="#">News & Press</a></li> -->
+                    <!-- <li><a href="#">Research Papers</a></li> -->
                 </ul>
             </div>
-            
+
             <div class="footer-section">
                 <h4>Support</h4>
                 <ul>
-                    <li><a href="#">Documentation</a></li>
-                    <li><a href="#">API Reference</a></li>
+                    <!-- <li><a href="#">Documentation</a></li> -->
+                    <!-- <li><a href="#">API Reference</a></li> -->
                     <li><a href="#">Community Forum</a></li>
                     <li><a href="#">Technical Support</a></li>
-                    <li><a href="#">Training & Workshops</a></li>
+                    <!-- <li><a href="#">Training & Workshops</a></li> -->
                 </ul>
             </div>
         </div>
-        
+
         <div class="footer-bottom">
-            <p>&copy; 2024 DeepG. All rights reserved. | 
-               <a href="#" style="color: #a7f3d0;">Privacy Policy</a> | 
-               <a href="#" style="color: #a7f3d0;">Terms of Service</a> | 
-               <a href="#" style="color: #a7f3d0;">Cookie Policy</a>
+            <p>&copy; 2025 DeepG. All rights reserved. 
+                <!-- <a href="#" style="color: #a7f3d0;">Privacy Policy</a> |
+                <a href="#" style="color: #a7f3d0;">Terms of Service</a> |
+                <a href="#" style="color: #a7f3d0;">Cookie Policy</a> -->
             </p>
         </div>
     </footer>
 
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
     <script>
         // Enhanced scroll animations with stagger effect
         const animateOnScroll = () => {
@@ -1519,12 +1578,12 @@
             elements.forEach((element, index) => {
                 const elementTop = element.getBoundingClientRect().top;
                 const elementVisible = 100;
-                
+
                 if (elementTop < window.innerHeight - elementVisible) {
                     // Add stagger delay for grouped elements
                     setTimeout(() => {
                         element.classList.add('animated');
-                    }, index * 100);
+                    }, index * 30);
                 }
             });
         };
@@ -1533,16 +1592,16 @@
         const handleScroll = () => {
             const header = document.querySelector('header');
             const scrolled = window.scrollY;
-            
+
             if (scrolled > 100) {
                 header.style.background = 'rgba(255, 255, 255, 0.98)';
-                header.style.boxShadow = '0 8px 32px rgba(16, 185, 129, 0.15)';
+                header.style.boxShadow = '0 8px 32px rgba(61, 161, 161, 0.15)';
                 header.style.transform = 'translateY(0)';
             } else {
                 header.style.background = 'rgba(255, 255, 255, 0.9)';
                 header.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.05)';
             }
-            
+
             // Hide header on scroll down, show on scroll up
             if (scrolled > 300) {
                 const currentScroll = scrolled;
@@ -1553,7 +1612,7 @@
                 }
                 this.lastScroll = currentScroll;
             }
-            
+
             animateOnScroll();
         };
 
@@ -1561,29 +1620,29 @@
         const createParticle = () => {
             const particle = document.createElement('div');
             particle.className = 'particle';
-            
+
             const types = ['circle', 'square', 'triangle'];
             const type = types[Math.random() * types.length | 0];
-            
+
             const size = Math.random() * 8 + 3;
             particle.style.width = `${size}px`;
             particle.style.height = `${size}px`;
             particle.style.left = `${Math.random() * 100}%`;
             particle.style.animationDuration = `${Math.random() * 8 + 8}s`;
             particle.style.animationDelay = `${Math.random() * 4}s`;
-            
+
             if (type === 'square') {
                 particle.style.borderRadius = '20%';
             } else if (type === 'triangle') {
                 particle.style.borderRadius = '0';
                 particle.style.clipPath = 'polygon(50% 0%, 0% 100%, 100% 100%)';
             }
-            
-            const colors = ['rgba(16, 185, 129, 0.4)', 'rgba(52, 211, 153, 0.3)', 'rgba(110, 231, 183, 0.2)'];
+
+            const colors = ['rgba(61, 161, 161, 0.4)', 'rgba(52, 211, 153, 0.3)', 'rgba(110, 231, 183, 0.2)'];
             particle.style.background = colors[Math.random() * colors.length | 0];
-            
+
             document.getElementById('particles').appendChild(particle);
-            
+
             setTimeout(() => {
                 if (particle.parentNode) {
                     particle.remove();
@@ -1600,23 +1659,23 @@
                 const suffix = target.replace(/[0-9]/g, '');
                 let current = 0;
                 const increment = numTarget / 100;
-                
+
                 const updateCounter = () => {
                     if (current < numTarget) {
                         current += increment;
                         const value = Math.floor(current);
                         counter.textContent = value + suffix;
-                        
+
                         // Add pulsing effect during counting
                         counter.style.transform = `scale(${1 + Math.sin(current / 10) * 0.05})`;
-                        
+
                         requestAnimationFrame(updateCounter);
                     } else {
                         counter.textContent = target;
                         counter.style.transform = 'scale(1)';
                     }
                 };
-                
+
                 const observer = new IntersectionObserver((entries) => {
                     if (entries[0].isIntersecting) {
                         setTimeout(() => {
@@ -1625,7 +1684,7 @@
                         observer.disconnect();
                     }
                 });
-                
+
                 observer.observe(counter);
             });
         };
@@ -1634,7 +1693,7 @@
         const handleParallax = () => {
             const scrolled = window.pageYOffset;
             const parallaxElements = document.querySelectorAll('.hero::before, .hero::after');
-            
+
             parallaxElements.forEach((element, index) => {
                 const speed = (index + 1) * 0.2;
                 element.style.transform = `translateY(${scrolled * speed}px) rotate(${scrolled * 0.02}deg)`;
@@ -1648,15 +1707,15 @@
                 e.preventDefault();
                 const button = form.querySelector('button');
                 const originalText = button.textContent;
-                
+
                 button.textContent = 'Sending...';
                 button.style.background = 'linear-gradient(135deg, #6b7280, #9ca3af)';
-                
+
                 // Simulate form submission
                 setTimeout(() => {
                     button.textContent = 'Message Sent! ✓';
-                    button.style.background = 'linear-gradient(135deg, #10b981, #34d399)';
-                    
+                    button.style.background = 'linear-gradient(135deg, #3da1a1, #6ec9c9)';
+
                     setTimeout(() => {
                         button.textContent = originalText;
                         form.reset();
@@ -1682,7 +1741,7 @@
 
         // Create particles more frequently with variation
         const particleInterval = setInterval(createParticle, 1500);
-        
+
         // Create burst of particles occasionally
         setInterval(() => {
             if (Math.random() > 0.7) {
@@ -1712,11 +1771,11 @@
 
         // Add hover effects to cards
         document.querySelectorAll('.solution-card, .team-card, .stat-item, .product-item').forEach(card => {
-            card.addEventListener('mouseenter', function() {
+            card.addEventListener('mouseenter', function () {
                 this.style.transform = this.style.transform.replace(/scale\([^)]*\)/, '') + ' scale(1.02)';
             });
-            
-            card.addEventListener('mouseleave', function() {
+
+            card.addEventListener('mouseleave', function () {
                 this.style.transform = this.style.transform.replace(/scale\([^)]*\)/, '') + ' scale(1)';
             });
         });
@@ -1728,31 +1787,48 @@
             }
         });
 
-         const backToTopBtn = document.getElementById("backToTop");
+        const backToTopBtn = document.getElementById("backToTop");
 
         window.addEventListener("scroll", () => {
-            if (window.scrollY > 300) {
-            backToTopBtn.style.display = "flex";
+            if (window.scrollY > 200) {
+                backToTopBtn.style.display = "flex";
             } else {
-            backToTopBtn.style.display = "none";
+                backToTopBtn.style.display = "none";
             }
         });
 
         backToTopBtn.addEventListener("click", () => {
             window.scrollTo({
-            top: 0,
-            behavior: "smooth"
+                top: 0,
+                behavior: "smooth"
             });
         });
 
         // JavaScript toggle
         const toggle = document.querySelector('.menu-toggle');
-        const navLinks = document.querySelector('.nav-links');
+        const menu = document.querySelector('.nav-links');
 
         toggle.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
+            menu.classList.toggle('active');
+            toggle.classList.toggle('active');
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!toggle.contains(e.target) && !menu.contains(e.target)) {
+                menu.classList.remove('active');
+                toggle.classList.remove('active');
+            }
+        });
+
+        // Close menu when clicking a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.remove('active');
+                toggle.classList.remove('active');
+            });
         });
     </script>
 </body>
+
 </html>
-            
