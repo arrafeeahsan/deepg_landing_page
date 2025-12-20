@@ -63,9 +63,10 @@
             background-clip: text;
             display: flex;
             align-items: center;
-            gap: 0.9rem;
+            gap: 0.7rem;
             transition: transform 0.3s ease;
             text-decoration: none;
+            line-height: 1;
         }
 
         .logo:hover {
@@ -73,15 +74,23 @@
         }
 
         .logo-image {
-            width: 65px;
-            height: auto;
+            padding-top: 5px;
+            width: 60px;
+            height: 60px;
+            object-fit: contain;
             filter: drop-shadow(0 3px 8px rgba(26, 77, 77, 0.25));
-            transition: all 0.3s ease;
+            transition: all 0.2s ease;
+            display: block;
         }
 
         .logo:hover .logo-image {
             filter: drop-shadow(0 5px 12px rgba(26, 77, 77, 0.35));
-            transform: translateY(-1px);
+            transform: translateY(-0px);
+        }
+
+        .logo span {
+            display: inline-block;
+            margin-top: 0px; 
         }
 
         .nav-links {
@@ -1202,8 +1211,7 @@
     <header>
         <nav>
             <a href="#home" class="logo">
-                <img src="C:\Users\Admin\Desktop\DeepG\LandingPages\DeepG\images\deepg_vetorized.png" alt="DeepG Logo"
-                    class="logo-image">
+                <img src="deepg_vetorized.png" alt="DeepG Logo" class="logo-image">
                 <span>DeepG</span>
             </a>
             <button class="menu-toggle"><i class="fas fa-bars"></i></button>
@@ -1520,8 +1528,10 @@
                     that transform businesses and drive innovation across industries worldwide.
                 </p>
                 <div class="social-links">
-                    <a href="https://www.facebook.com/deeeepg" class="social-link"><i class="fa-brands fa-square-facebook"></i></a>
-                    <a href="https://www.linkedin.com/company/deepg" class="social-link"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://www.facebook.com/deeeepg" class="social-link"><i
+                            class="fa-brands fa-square-facebook"></i></a>
+                    <a href="https://www.linkedin.com/company/deepg" class="social-link"><i
+                            class="fa-brands fa-linkedin"></i></a>
                     <a href="https://x.com/DeepG898263" class="social-link"><i class="fa-brands fa-x-twitter"></i></a>
                 </div>
             </div>
@@ -1562,7 +1572,7 @@
         </div>
 
         <div class="footer-bottom">
-            <p>&copy; 2025 DeepG. All rights reserved. 
+            <p>&copy; 2025 DeepG. All rights reserved.
                 <!-- <a href="#" style="color: #a7f3d0;">Privacy Policy</a> |
                 <a href="#" style="color: #a7f3d0;">Terms of Service</a> |
                 <a href="#" style="color: #a7f3d0;">Cookie Policy</a> -->
